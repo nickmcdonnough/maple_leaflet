@@ -10,10 +10,10 @@ With MapleLeaflet you can create the following layers provided by the leaflet.js
 
 ### Examples
 Basic example of markers and a polygon on a map
-![alt text](http://i.imgur.com/bf8aMAr.png)
+![alt text](http://i.imgur.com/bf8aMAr.png "Penn places")
 
 Example of a chloropleth map
-![alt text](http://i.imgur.com/sptnq3E.png)
+![alt text](http://i.imgur.com/sptnq3E.png "Chloropleth map")
 
 ### Notes
 For now MapleLeaflet only uses tilesets from OpenStreetMap though I plan to expand that soon.  MapleLeaflet also assumes that the leaflet directory is in the same directory as the exported html file. Please see the examples directory for tips on how to use maple_leafet.
