@@ -1,0 +1,1 @@
+The JSON for the states is an edited version of what appears in the leafletjs.com chloropleth map example.  The unemployment data is from the Bureau of Labor Statistics (http://www.bls.gov/web/laus/lauhsthl.htm).
