@@ -1,4 +1,4 @@
-require '../lib/maple_leaflet.rb'
+require 'maple_leaflet.rb'
 
 mapoptions = {
   :center => [39.952162,-75.196373],

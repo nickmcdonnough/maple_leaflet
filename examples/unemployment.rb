@@ -1,4 +1,4 @@
-require '../lib/maple_leaflet.rb'
+require 'maple_leaflet.rb'
 require 'csv'
 
 mapoptions = {
