@@ -5,41 +5,41 @@
 class Layers < GeoJSON
 
   def marker (coords, caption=nil)
-    count		  = @markers.length
+    count			= @markers.length
     template	= File.read(File.dirname(__FILE__) + '/templates/marker.js')
     options		= {
-      :count  => count,
-      :point  => coords
+			:count	=> count,
+			:point	=> coords
     }
     @markers[count] = Mustache.render(template, options)
     caption ? popup("marker#{count}", caption) : return
   end
 
-  def circle (coords, radius, caption=nil, opts={})
-    count		  = @circles.length
+  def circle (coords, radius, caption=nil, style={})
+    count			= @circles.length
     template	= File.read(File.dirname(__FILE__) + '/templates/circle.js')
-	  options   = {
-		  :weight			  => 1.5,
+		options		= {
+			:weight			  => 1.5,
 		  :color			  => '#999',
 		  :opacity		  => 1,
-    	:fillcolor		=> '#8a5cde',
+			:fillcolor		=> '#8a5cde',
     	:fillopacity	=> 0.5
-    }.merge!(opts)
+    }.merge!(style)
     options.merge!({:count => count, :point => coords, :radius => radius})
     @circles[count] = Mustache.render(template, options)
     caption ? popup("circle#{count}", caption) : return
   end
   
-  def polygon (coords, caption=nil, opts={})
+  def polygon (coords, caption=nil, style={})
     count     = @polygons.length
     template  = File.read(File.dirname(__FILE__) + '/templates/polygon.js')
 	  options   = {
-		  :weight			  => 1.5,
-		  :color			  => '#999',
-		  :opacity		  => 1,
-    	:fillcolor		=> '#8a5cde',
-    	:fillopacity	=> 0.5
-    }.merge!(opts)
+			:weight			  => 1.5,
+			:color			  => '#999',
+			:opacity		  => 1,
+			:fillcolor		=> '#8a5cde',
+			:fillopacity	=> 0.5
+    }.merge!(style)
     options.merge!({:count => count, :points => coords})
     @polygons[count] = Mustache.render(template, options)
     caption ? popup("polygon#{count}", caption) : return
@@ -49,8 +49,8 @@ class Layers < GeoJSON
 	  count     = @popups.length
     template	= File.read(File.dirname(__FILE__) + '/templates/popup.js')
     options		= {
-      :target   => target,
-      :caption	=> caption,
+			:target   => target,
+			:caption	=> caption,
     }
     @popups[count] = Mustache.render(template, options)
   end
