@@ -2,6 +2,7 @@
 MapleLeaflet is a gem for building maps with the leaflet.js mapping library.  Leaflet.js is an awesome open source library developed by Vladimir Agafonkin.  You can learn more about it at www.leafletjs.com.
  
 With MapleLeaflet you can create the following layers provided by the leaflet.js API:
+
         - markers
         - circles
         - polygons
