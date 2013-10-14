@@ -5,7 +5,7 @@
 class Layers < GeoJSON
 
   def marker (coords, caption=nil)
-    count		= @markers.length
+    count		  = @markers.length
     template	= File.read(File.dirname(__FILE__) + '/templates/marker.js')
     options		= {
       :count  => count,
@@ -16,12 +16,12 @@ class Layers < GeoJSON
   end
 
   def circle (coords, radius, caption=nil, opts={})
-    count		= @circles.length
+    count		  = @circles.length
     template	= File.read(File.dirname(__FILE__) + '/templates/circle.js')
-	options = {
-		:weight			=> 1.5,
-		:color			=> '#999',
-		:opacity		=> 1,
+	  options   = {
+		  :weight			  => 1.5,
+		  :color			  => '#999',
+		  :opacity		  => 1,
     	:fillcolor		=> '#8a5cde',
     	:fillopacity	=> 0.5
     }.merge!(opts)
@@ -33,10 +33,10 @@ class Layers < GeoJSON
   def polygon (coords, caption=nil, opts={})
     count     = @polygons.length
     template  = File.read(File.dirname(__FILE__) + '/templates/polygon.js')
-	options = {
-		:weight			=> 1.5,
-		:color			=> '#999',
-		:opacity		=> 1,
+	  options   = {
+		  :weight			  => 1.5,
+		  :color			  => '#999',
+		  :opacity		  => 1,
     	:fillcolor		=> '#8a5cde',
     	:fillopacity	=> 0.5
     }.merge!(opts)
@@ -46,7 +46,7 @@ class Layers < GeoJSON
   end
 
   def popup (target, caption)
-	count     	= @popups.length
+	  count     = @popups.length
     template	= File.read(File.dirname(__FILE__) + '/templates/popup.js')
     options		= {
       :target   => target,
