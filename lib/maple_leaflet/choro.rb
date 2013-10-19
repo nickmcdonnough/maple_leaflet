@@ -1,5 +1,5 @@
 #
-# Formats provided JSON for drawing chloropleth maps.
+# Formats provided JSON for drawing choropleth maps.
 # Source data is used to determine color.  Source data bound to popup.
 #
 # Presumes JSON data is formatted as a FeatureCollection as such:
@@ -25,7 +25,7 @@
 # "coordinates" you better have these if you want a map!
 #
 
-module Chloro
+module Choro
 
   def rank(data_hsh)
     avg = data_hsh.values.inject(:+)/data_hsh.size
@@ -39,7 +39,7 @@ module Chloro
     data_hsh.each_key{|k| data_hsh[k]=col[data_hsh[k]-1]}
   end
 
-  def chloropleth(data_csv, json_data, color="green")
+  def choropleth(data_csv, json_data, color="green")
     flat     = Hash[*(data_csv.flatten)]
     floats   = Hash[flat.map{|k,v| [k, v.to_f]}]
     data_hsh = Hash[floats.sort_by{|k,v| v}]
@@ -55,7 +55,7 @@ module Chloro
       obj["properties"]["popupContent"] = "#{obj["id"]}: #{floats[obj["id"]]}"
       obj["properties"]["style"] = style
     }
-    geochloro(json_hsh.to_json)
+    geochoro(json_hsh.to_json)
   end
 
 end
