@@ -13,6 +13,6 @@ geos = File.read('states.js')
 
 unemp = MapleLeaflet.new(mapoptions)
 
-unemp.chloropleth(data, geos, color="purple")
+unemp.choropleth(data, geos, color="purple")
 
 File.write('unemployment.html', unemp.drawmap)

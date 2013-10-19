@@ -26,15 +26,17 @@ class MapleLeaflet < Layers
   end
  
   def drawmap
-    finalbuild = String.new
-    layers = @markers+@circles+@polygons+@popups
-    finalbuild << @htmltags unless @htmltags == nil
-    finalbuild << @createmap unless @createmap == nil
-    layers.each { |x| finalbuild << x.to_s }
-    finalbuild << @geojson unless @geojson == nil
-    finalbuild << @geochloro unless @geochloro == nil
-    finalbuild << '</script>'
-    return finalbuild
+    [
+      @markers,
+      @circles,
+      @polygons,
+      @popups,
+      @htmltags,
+      @createmap,
+      @geojson,
+      @geochoro,
+      '</script>'
+    ].join
   end
 
 end
