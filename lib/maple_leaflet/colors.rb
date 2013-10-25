@@ -1,5 +1,5 @@
 #
-# Provides color palatte for creating chloropleth maps
+# Provides color palatte for creating choropleth maps
 #
 
 module Colors

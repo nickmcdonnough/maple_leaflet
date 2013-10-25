@@ -18,9 +18,9 @@ class GeoJSON
     @geojson = Mustache.render(template, options)
   end
 
-  def geochloro(geodata)
-    template = File.read(File.dirname(__FILE__) + '/templates/geochloro.js')
-    @geochloro = Mustache.render(template, {:coloredgeos => geodata})
+  def geochoro(geodata)
+    template = File.read(File.dirname(__FILE__) + '/templates/geochoro.js')
+    @geochoro = Mustache.render(template, {:coloredgeos => geodata})
   end
   
 end

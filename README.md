@@ -13,7 +13,7 @@ With MapleLeaflet you can create the following layers provided by the leaflet.js
 Basic example of markers and a polygon on a map
 ![alt text](http://i.imgur.com/bf8aMAr.png "Penn places")
 
-Example of a chloropleth map
+Example of a choropleth map
 ![alt text](http://i.imgur.com/sptnq3E.png "Chloropleth map")
 
 ### Notes
@@ -21,7 +21,7 @@ For now MapleLeaflet only uses tilesets from OpenStreetMap though I plan to expa
 
 ### Coming Soon
        - support for other tilesets
-       - less stringent inputs for chloropleth map building
+       - less stringent inputs for choropleth map building
        - ability to modify map state
  
 Named after my dog Maple :)
