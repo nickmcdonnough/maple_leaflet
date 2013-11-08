@@ -30,7 +30,7 @@ module Choro
   def rank(data_hsh)
     avg = data_hsh.values.inject(:+)/data_hsh.size
     a = data_hsh.values.map{|x| (x-avg)**2}.inject(:+)/data_hsh.size
-    std = Math.sqrt(a)
+    std = a**0.5
     data_hsh.each_key{|k| data_hsh[k]=(data_hsh[k]/std).to_i}
   end
 
@@ -51,7 +51,13 @@ module Choro
 
     json_hsh["features"].each {|obj|
       hue   = colored[obj["id"]]
-      style = {"weight"=>1.5, "color"=>"white", "opacity"=> 1, "fillColor"=>hue, "fillOpacity"=> 1} 
+      style = {
+        "weight"      => 1.5, 
+        "color"       => "white", 
+        "opacity"     => 1, 
+        "fillColor"   => hue, 
+        "fillOpacity" => 1
+      } 
       obj["properties"]["popupContent"] = "#{obj["id"]}: #{floats[obj["id"]]}"
       obj["properties"]["style"] = style
     }

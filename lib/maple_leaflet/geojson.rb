@@ -1,6 +1,6 @@
 #
 # geojson:   formats and draws GeoJSON objects.
-# geochloro: only draws chlropleth maps. formatting is in chloro.rb
+# geochloro: only draws chlropleth maps. formatting is in choro.rb
 #
 
 class GeoJSON
@@ -13,8 +13,7 @@ class GeoJSON
       :opacity      => 1,
       :fillcolor    => '#8a5cde',
       :fillopacity  => 0.5,
-    }.merge!(style)
-    options.merge!(:geojson => source)
+    }.merge!(style.merge(:geojson => source))
     @geojson = Mustache.render(template, options)
   end
 
