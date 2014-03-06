@@ -1,4 +1,4 @@
-require 'maple_leaflet'
+require_relative '../lib/maple_leaflet'
 require 'csv'
 
 mapoptions = {

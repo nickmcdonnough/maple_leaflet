@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.description = 'A small gem for working with leaflet.js'
   s.authors     = 'Nick McDonnough'
   s.email       = 'nickmcd@gmail.com'
+  s.files       = Dir['lib/**/*']
 
   s.add_runtime_dependency 'mustache',
     ['= 0.99.4']
