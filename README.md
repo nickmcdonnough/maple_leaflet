@@ -9,6 +9,15 @@ With MapleLeaflet you can create the following layers provided by the leaflet.js
         - popups
         - GeoJSON
 
+### Installation
+
+MapleLeaflet is not on RubyGems (yet) so install using bundler. Add the following to your Gemfile:
+
+```ruby
+gem 'maple_leaflet', :git => https://github.com/nickmcdonnough/maple_leaflet.git
+```
+
+
 ### Examples
 Basic example of markers and a polygon on a map
 ![alt text](http://i.imgur.com/bf8aMAr.png "Penn places")
